@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    height: 100vh;
+    
+}
+
+.tooltip {
+    width: 200px;
+    height: 200px;
+    background-image: url('https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: relative;
+    
+}
+
+.tooltip::before,
+.tooltip::after {
+    --t_width: 25px;
+    --scale: 0;
+    --tooltip-color: green;
+    --arr-size: 10px;
+    
+
+    position: absolute;
+    top: -.25rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+    transition: 1000ms transform;
+    transform-origin: bottom center;
+}
+
+.tooltip::before {
+    --translate-y: calc(-100% - var(--arr-size));
+    content: attr(data-tooltip);
+    /* width: 50px;
+    height: 50px; */
+    background-color: var(--tooltip-color);
+    border-radius: .3rem;
+    color: white;
+    padding: .5rem;
+    width: max-content;
+    max-width: 100%;
+    text-align: center;
+}
+
+.tooltip::after {
+    --translate-y: calc(-1 * var(--arr-size));
+    content: '';
+    border: var(--arr-size) solid transparent;
+    border-top-color: var(--tooltip-color);
+    transform-origin: top center;
+}
+
+.tooltip:hover::before,
+.tooltip:hover::after {
+    --scale: 1;
+    
+}
