@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -15,5 +15,83 @@
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container header__inner">
+          <a href="index.html" class="logo">
+            <span class="logo__text">Play</span>ground
+          </a>
+          <nav class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Events</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Pricing</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Blog</a>
+              </li>
+              <li class="header__menu-item">
+                <a
+                  href="#"
+                  class="header__menu-link btn btn--border btn--rounded"
+                  >Login</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <section class="banner">
+        <div class="container">
+          <h1 class="banner__heading">
+            The Kids playground
+          </h1>
+          <p class="banner__desc">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem
+            ipsum dolor sit, amet consectetur adipisicing elit. Velit, eaque!
+          </p>
+          <div class="banner__buttons">
+            <a href="#" class="btn btn--border btn--rounded">Explore</a>
+            <a href="#" class="btn btn--primary btn--rounded has-shadow"
+              >Buy Tickets</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="category">
+        <div class="container">
+          <ul class="category__list">
+            <li class="category__item shadow-pink">
+              <img class="category__item-image" src="images/img1.png" alt="" />
+              <h3 class="category__item-name">
+                Safe Rides
+              </h3>
+              <a class="category__item-detail" href="#">CC Certified --></a>
+            </li>
+            <li class="category__item shadow-red">
+              <img class="category__item-image" src="images/img2.png" alt="" />
+              <h3 class="category__item-name">Delicious Foods</h3>
+              <a class="category__item-detail" href="#">Gluten Free --></a>
+            </li>
+            <li class="category__item shadow-blue">
+              <img class="category__item-image" src="images/img3.png" alt="" />
+              <h3 class="category__item-name">Entertaiment</h3>
+              <a class="category__item-detail" href="#"
+                >Suitable for kids --></a
+              >
+            </li>
+            <li class="category__item shadow-orange">
+              <img class="category__item-image" src="images/img4.png" alt="" />
+              <h3 class="category__item-name">Ice-Cream</h3>
+              <a class="category__item-detail" href="#">No Synthetic --></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>
